@@ -1,0 +1,203 @@
+
+
+/* fondo de la pagina index */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+    background-color: #103b4d;
+    background: -moz-radial-gradient(#F4C4FF);
+}
+.app{
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+    height:100vh;
+    width:100%;
+}
+#padre{
+    display:block;
+    width:100%;
+    height:inherit;
+}
+#padre{
+    list-style-type:none;
+}
+.animacion:nth-child(1)
+{
+    position:absolute;
+    left:10%;
+    height:30px;
+    width:30px;
+    background:rgba(255,255,255,.2);
+}
+.animacion:nth-child(2)
+{
+    position:absolute;
+    left:30%;
+    height:45px;
+    width:45px;
+    background:rgba(255,255,255,.2);
+}
+.animacion:nth-child(3)
+{
+    position:absolute;
+    left:50%;
+    height:70px;
+    width:70px;
+    background:rgba(255,255,255,.2);
+}
+.animacion:nth-child(4)
+{
+    position:absolute;
+    left:80%;
+    height:20px;
+    width:20px;
+    background:rgba(255,255,255,.2);
+}
+.animacion{
+    animation:animate 15s linear 1s infinite;
+}
+
+@keyframes animate{
+    from{
+    transform: translateY(+1500%) rotate(180deg)
+    }
+    to{
+    transform: translateY(-150%)
+        rotate(360deg)
+    }
+}
+
+/* Menu de navegacion de la pagina */
+header {
+    display: flex; /* Alinea los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: flex-start; /* Distribuye espacio entre elementos */
+    padding: 20px; /* Ajusta el padding según necesites */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+  @media (max-width: 768px) { /* Ajusta el valor según necesites */
+    header {
+        flex-direction: column; /* stack elements vertically */
+        align-items: center; /* center horizontally */
+        justify-content: center;
+    }
+}
+
+/* From Uiverse.io by Admin12121 */ 
+.menu {
+
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px 0 rgba(#000, 0.075);
+    margin-left: auto;
+
+}
+
+.link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 50px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform-origin: center left;
+    transition: width 0.2s ease-in;
+    text-decoration: none;
+    color: inherit;
+    &:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    background-color: #eee;
+    }
+
+    &:hover,
+    &:focus {
+    outline: 0;
+    width: 130px;
+
+    &:before,
+    .link-title {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    }
+}
+
+.link-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    flex-shrink: 0;
+    left: 4px;
+    position: absolute;
+    svg {
+    width: 35px;
+    height: 35px;
+    padding-left: 10%;
+    }
+}
+
+.link-title {
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    display: block;
+    text-align: center;
+    text-indent: 35px;
+    width: 100%;
+}
+
+/* logo de las paginas */
+.Escudo {
+    width: 200px;
+    padding-left: 1%;
+    padding-top: 0.5%;
+}
+
+img{
+    width: 100%;
+    filter: drop-shadow(0px 0px 12px pink);
+}
+
+/* titulo del index */
+
+h1{
+    font-weight: 1rem;
+    font-size: 50px ;
+    font-family: sans-serif;
+    text-align: center;
+    color:aliceblue;
+    padding-top: 0.5px;
+    padding-right: 2px;
+}
+
+
+.Objetivo {
+    color: white;
+    font-family: sans-serif;
+    padding-top: 30px;
+    padding-right:1%;
+    padding-left: 1%;
+    text-align: center;
+    font-size: 150%;
+}
